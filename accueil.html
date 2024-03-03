@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="./CSS/accueil.css">
+    <link rel="icon" type="image/x-icon" href="image/list-logo-character-vector-illustration-art-paper_567062-291.avif">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<body>
+     <!-------------------------------------- Sidebar --------------------------------------->
+        <!--ouvrir le side et fermer-->
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+
+        <div class="sidebar">
+            <header><a href="index.html">Tâches</a></header>
+            <a href="#" class="active">
+                <i class="fas fa-tasks"></i>
+                <span>Tâches</span>
+            </a>
+            <a href="#">
+                <i class="far fa-calendar-alt"></i>
+                <span>Calendrier</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-chart-line"></i>
+                <span>Statistique</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-users"></i>
+                <span>Groupe</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-cog"></i>
+                <span>Paramètre</span>
+            </a>
+        </div>
+
+    <!-------------------------------------- Listes des tâches --------------------------------------->
+    <div class="container">
+        <div class="todo-app">        
+        <h1>Ma Liste de tâches</h1>
+        <!-- Ajouter une nouvelle tache -->
+        <div class="row">
+        <input type="text" id="taskInput" placeholder="Nouvelle tâche...">
+        <!-- le boutton pour -->
+        <button id="addTask">Ajouter</button>
+        </div>
+        </div>
+        <!-- Liste de tache-->
+        <ul id="taskList">
+            <!-- <li class="checked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li> -->
+        </ul>
+        <!-- Button pour effacer sur le local storage -->
+        <button id="clearAll">Effacer LocalStorage</button>
+    </div>
+    <script src="JavaScript/accueil.js"></script>
+
+    
+</body>
+</html>

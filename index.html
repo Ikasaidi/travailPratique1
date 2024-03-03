@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="icon" type="image/x-icon" href="./image/list-logo-character-vector-illustration-art-paper_567062-291.avif">
+     
+</head>
+<body>
+    <header>
+        <h2 class="logo">TODO <br>LIST</h2>
+        <nav class="navline">
+            <a href="index.html">Home</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+<!--######################################################  PAGE HOME ##############################################################-->
+    <div class="content">
+        <h1 id="text">APPLICATION DE GESTION DES TACHES</h1>
+        <a href="#">Explore</a>
+    </div>
+<!--################################################### FORMULAIRE POUR SE CONNECTER ###########################################-->
+
+    <div class="container" >
+        <span class="fermer">
+            <ion-icon name="close-circle"></ion-icon></span>
+       
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#" method="post" onsubmit="userInfo(); return false;">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" id="login-email">
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" id="login-password">
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                <label>
+                    <input type="checkbox"> Souviens-toi de moi
+                </label>
+                <a href="#">Forgot Password</a>
+            </div>
+            <button type="submit" class="btn" onclick="userInfo()">Login</button>
+            <div class="login-signup">
+                <p>Vous n'avez pas de compte? <a href="#" class="signup-lien">Sign Up</a></p>
+            </div>
+            </form>
+        </div>
+    
+    
+
+<!--################################################### FORMULAIRE POUR S'INSCRIRE ###########################################-->
+    
+        <div class="form-box signup" >
+            <h2>Sign Up</h2>
+            <p style="text-align: center; margin-top: 10px;">Veuillez remplir ce formulaire pour créer un compte</p>
+            <form action="#" method="post">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text"  required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Répéter le mot de passe</label>
+                </div>
+                <div class="remember-forgot">
+                <label>
+                    <input type="checkbox"> En créant un compte, vous acceptez nos <a href="#" style="color:black; font-weight: 600">Conditions et confidentialité</a>.
+                </label>
+
+            </div>
+            <button type="submit" class="btn">Sign up</button>
+            <div class="login-signup">
+                <p>Vous avez déja un compte? <a href="#" class="login-lien">Login</a></p>
+            </div>
+            </form>
+        </div>
+        
+    </div>
+    
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="JavaScript/index.js"></script>
+</body>
+</html>
