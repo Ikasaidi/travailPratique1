@@ -1,9 +1,10 @@
+/* Réinitialisation des marges, des rembourrages et de la boîte de modélisation */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/*Style general de la page*/
 body {
     display: flex;
     justify-content: center;
@@ -23,7 +24,7 @@ header{
     align-items: center;
     z-index: 99;
 }
-
+/* Style du logo */
 .logo{
     font-size: 2em;
     color: white;
@@ -34,6 +35,7 @@ header{
     text-align: center;
 }
 
+/* Style des liens de navigation dans l'en-tête */
 .navline a{
     position: relative;
     font-size: 1.1em;
@@ -43,6 +45,7 @@ header{
     margin-left: 40px;
 }
 
+/* Effet de soulignement des liens de navigation */
 .navline a::after{
     content: '';
     position: absolute;
@@ -56,11 +59,14 @@ header{
     transform: scaleX(0);
     transition: transform .5s;
 }
+
+/* Effet de survol des liens de navigation */
 .navline a:hover::after{
     transform-origin: left;
     transform: scaleX(1);
 }
 
+/* Style du bouton de connexion */
 .navline .btnLogin-popup{
     width: 130px;
     height: 50px;
@@ -76,11 +82,13 @@ header{
     transition: .5s;
 }
 
+/* Effet de survol du bouton de connexion */
 .navline .btnLogin-popup:hover{
     background: white;
     color:  black;
 }
 
+/* Style du conteneur de formulaire */
 .container {
     position: fixed;
     width: 400px;
@@ -97,15 +105,19 @@ header{
     transform: scale(0);
     transition: transform .5s ease, height .2s ease;
 }
+
+/*formulaire actif*/
 .container.active-popup {
     transform: scale(1);
     margin-right: 30px;
 }
+
 .container.active {
     height: 590px;
 
 }
 
+/*des boîtes de formulaire login et sign up (active)*/
 .container .form-box{
     width: 100%;
     padding: 40px;
@@ -131,6 +143,7 @@ header{
     transform: translateX(0);
 }
 
+/*Bouton pour fermer*/
 .container .fermer{
     position: absolute;
     top: 0; right: 0;
@@ -149,12 +162,14 @@ header{
 
 }
 
+/* Style du titre du formulaire */
 .form-box h2{
     font-size: 2em;
     color: #162938;
     text-align: center;
 }
 
+/* Style des boîtes de saisie de texte */
 .input-box{
     position: relative;
     width: 100%;
@@ -163,6 +178,7 @@ header{
     margin: 30px 0;
 }
 
+/* Style des boîtes de saisie de texte  (label)*/
 .input-box label{
     position: absolute;
     top: 50% ; left: 5px;
@@ -173,11 +189,15 @@ header{
     pointer-events: none;
     transition: .5s;
 }
+
+/*lorsqu'elles sont focus ou remplies*/
 .input-box input:focus~label,
 .input-box input:valid~label {
     top: -5px;
 
 }
+
+
 .input-box input{
     width: 100%;
     height: 100%;
@@ -189,6 +209,8 @@ header{
     font-weight: 600;
     padding: 0 35px 0 5px ;
 }
+
+/* Style des icônes */
 .input-box .icon{
     position: absolute;
     right: 8px;
@@ -196,6 +218,8 @@ header{
     color: #162938;
     line-height: 57px;
 }
+
+/* Style des cases à cocher et des liens dans la section de rappel de mot de passe oublié */
 .remember-forgot{
     font-size: .9em;
     color: #162938;
@@ -219,6 +243,7 @@ header{
     text-decoration: underline;
 }
 
+/* Style du bouton de soumission du formulaire */
 .btn{
     width: 100%;
     height: 45px;
@@ -232,6 +257,7 @@ header{
     font-weight: 500;
 }
 
+/* Style des liens "S'inscrire" ou "Se connecter" */
 .login-signup{
     font-size: .9em;
     color: #162938;
@@ -251,6 +277,7 @@ header{
 
 }
 
+/*style du texte*/
 #text{
     text-align: center;
     position: absolute;
@@ -262,6 +289,8 @@ header{
     border-bottom: 2.5px solid rgb(173, 94, 178); 
     text-underline-offset: 50px;
 }
+
+/*style du bouton mit au milleu avant et apres*/
 .content{
     text-align: center;
     margin-right: 25%;
@@ -277,6 +306,7 @@ header{
     margin-top: 30%;
     margin-left: 100%;
 }
+/* Effet de survol des liens dans la section de contenu */
 .content a:hover{
     background-color: #dfc1f2;
     opacity: 60%;

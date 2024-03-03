@@ -1,8 +1,10 @@
+/*Bouton ajouter*/
 #addTask {
     background-color: lavender;
     color: #333;
 }
 
+/* Style général du corps de la page */
 body {
     flex-direction: column;
     justify-content: center;
@@ -16,17 +18,17 @@ width: 240px;
 left: -240px;
 top: -0px;
 height: 100%;
-background-color: rgba(201, 162, 238, 0.9); /* Modifier la couleur de fond */
+background-color: rgba(201, 162, 238, 0.9); 
 transition: all .5s ease;
 margin-bottom: 100%;
 }
 
 .sidebar header {
 font-size: 28px;
-color: #162938; /* Modifier la couleur du texte */
+color: #162938; 
 line-height: 70px;
 text-align: center;
-background-color: rgba(201, 162, 238, 0.9); /* Modifier la couleur de fond */
+background-color: rgba(201, 162, 238, 0.9); 
 user-select: none;
 font-family: 'Lato', sans-serif;
 }
@@ -35,7 +37,7 @@ font-family: 'Lato', sans-serif;
 display: block;
 height: 65px;
 width: 100%;
-color: #162938; /* Modifier la couleur du texte */
+color: #162938; 
 line-height: 65px;
 padding-left: 30px;
 box-sizing: border-box;
@@ -47,9 +49,9 @@ font-weight: 300;
 }
 
 a.active, a:hover {
-border-left: 5px solid #8e7c98; /* Modifier la couleur de l'accent */
-color: #fff; /* Modifier la couleur du texte au survol */
-background: linear-gradient(to left, #8e7c98, #c9a2ee); /* Modifier le dégradé au survol */
+border-left: 5px solid #8e7c98; 
+color: #fff; 
+background: linear-gradient(to left, #8e7c98, #c9a2ee); /* dégradé  */
 }
 
 .sidebar a i {
@@ -61,33 +63,25 @@ color: #162938;
 .sidebar a span {
 letter-spacing: 1px;
 text-transform: uppercase;
-font-weight: 500; /* Ajouter une épaisseur au texte */
+font-weight: 500; 
 }
-
+/*style sur les lien de la barre*/
 .sidebar > a.active, .sidebar > a:hover:nth-child(even) {
---accent-color: #52d6f4; /* Modifier la couleur de l'accent */
+--accent-color: #52d6f4;
 --gradient-color: #c1b1f7; /* Modifier la deuxième couleur du dégradé */
 }
-
+/*style sur les lien de la barre*/
 .sidebar a.active, .sidebar > a:hover:nth-child(odd) {
 --accent-color: #c1b1f7; /* Modifier la couleur de l'accent */
 --gradient-color: #a890fe; /* Modifier la deuxième couleur du dégradé */
 }
 
-.sidebar a i {
-    font-size: 23px;
-    margin-right: 16px;
-}
-
-.sidebar a span {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
+/* cacher le check input*/
 #check {
     display: none;
 }
 
+/* Style pour les boutons d'ouverture et de fermeture de la barre latérale */
 label #btn, label #cancel {
     position: absolute;
     left: 5px;
@@ -108,7 +102,7 @@ label #btn, label #cancel {
     line-height: 45px;
     transition: all .5s ease;
 }
-
+/*le bouton du sidebar */
 label #cancel {
     opacity: 0;
     visibility: hidden;
@@ -130,7 +124,7 @@ label #cancel {
     visibility: visible;
 }
 
-/*###################################################3*/
+/*###################################################*/
 
 
 .container {
@@ -154,7 +148,7 @@ label #cancel {
     padding-left: 20px;
     margin-bottom: 25px;
 }
-
+/*style pour la liste de tache*/
 input {
     flex: 1;
     border: none;
@@ -188,18 +182,7 @@ ul li::before{
 
 
 }
-ul li.checked{
-    color: #555;
-    text-decoration: line-through;
-}
-ul li.checked::before{
-    background-image: url(../Images/checked.png);
-}
-::placeholder {
-    color: #666;
-    opacity: 0.7;
-}
-
+/*bouton efface sauvegarde*/
 button {
     background:#ff5945;
     color: #fff;
@@ -216,12 +199,12 @@ button {
     font-size: 24px;
     margin-bottom: 20px;
 }
-
+/*mettre une line quand c'est done*/
 #taskDone {
     text-decoration: line-through;
     opacity: 0.7;
 }
-
+/*style les images qui permet de supp, modif, done*/
 img{
     margin-left: 20%;
     font-size: large;

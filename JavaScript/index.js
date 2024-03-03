@@ -1,8 +1,13 @@
+//ramener l'element container
 const container = document.querySelector('.container');
+//ramener les liens pour login et signup
 const loginLien = document.querySelector('.login-lien' );
 const singupLien = document.querySelector('.signup-lien' );
+//le popup boutton et l'icone X
 const boutonPop = document.querySelector('.btnLogin-popup');
 const fermerIcon = document.querySelector('.fermer');
+
+//Ajout event a signup , login, popup boutton
 singupLien.addEventListener('click', ()=> {
     container.classList.add('active');
 });
@@ -21,15 +26,17 @@ fermerIcon.addEventListener('click', ()=> {
 
 // Enregistrer les informations dans le localStorage lors de l'inscription
 const signupForm = document.querySelector('.signup form');
+
 signupForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Pour éviter que le formulaire ne soit soumis normalement
+    event.preventDefault(); // formulaire ne soit soumis 
+
     const email = signupForm.querySelector('input[type="email"]').value;
     const password = signupForm.querySelector('input[type="password"]').value;
+    //sauvegarde d'info
     localStorage.setItem('email', email);
     localStorage.setItem('password', password);
-    // Vous pouvez également ajouter d'autres informations ici si nécessaire
-    // Par exemple, le nom d'utilisateur, etc.
-    // Ensuite, vous pouvez rediriger l'utilisateur vers la page d'accueil ou effectuer d'autres actions
+
+    // rediriger vers la page d'accueil 
     alert('Inscription réussie ! Redirection vers la page d\'accueil...');
     window.location.href = 'accueil.html';
 });
@@ -37,20 +44,20 @@ signupForm.addEventListener('submit', (event) => {
 
 function userInfo(){
     
-    // Récupérer les données du formulaire de connexion
+    // Récupérer l'info connection
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
 
-    // Récupérer les données d'inscription depuis le localStorage
+    // Récupérer depuis le localStorage
     const storageEmail = localStorage.getItem('email');
     const storagePassword = localStorage.getItem('password');
 
-    // Vérifier si les informations de connexion correspondent aux informations d'inscription
+    //  si les informations de connexion == informations d'inscription
     if (email === storageEmail && password === storagePassword) {
-        // Si les informations correspondent, rediriger l'utilisateur vers une autre page
+        // oui, rediriger vers accueil
         window.location.href = 'accueil.html';
     } else {
-        // Sinon, afficher un message d'erreur ou effectuer d'autres actions
+        // Sinon, message d'erreur 
         alert('Identifiants invalides. Veuillez réessayer.');
     }
 
